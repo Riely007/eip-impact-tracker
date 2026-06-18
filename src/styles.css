@@ -1,23 +1,40 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "alphaLyrae";
+  src: url("/fonts/AlphaLyrae_Medium.woff2") format("woff2");
+  font-weight: 400 600;
+  font-display: swap;
+}
+
 :root {
-  --bg: #0e0f1a;
-  --bg-soft: #161827;
-  --bg-card: #1b1e30;
-  --border: #2a2e45;
-  --text: #e7e9f3;
-  --text-dim: #9aa0bd;
-  --accent: #8b7dff;
-  --accent-soft: #6c5ce7;
+  /* warm parchment / dark-olive palette (from riely007.github.io/eth-lib) */
+  --bg: #14130c;
+  --bg-soft: #1c1b12;
+  --bg-card: #211f15;
+  --border: rgba(241, 236, 217, 0.14);
+  --border-strong: rgba(241, 236, 217, 0.22);
+  --text: #f1ecd9;
+  --text-dim: #9c9881;
+  --accent: #d9b779;
+  --cta-bg: linear-gradient(180deg, #2a2818 0%, #1c1b12 52%, #14130c 100%);
+  --cta-fg: #ffffe1;
 
-  /* impact heatmap */
-  --i0: #1a1d2e;
-  --i1: #243a4d;
-  --i2: #2f6f5f;
-  --i3: #c2603a;
-  --i1-mark: #6fb6ff;
-  --i2-mark: #4fd6a8;
-  --i3-mark: #ff9f6e;
+  /* impact heatmap — warm sequential ramp (khaki → gold → terracotta) */
+  --i1-base: 201, 191, 143;
+  --i2-base: 224, 180, 80;
+  --i3-base: 212, 103, 58;
+  --i1-mark: #cdc498;
+  --i2-mark: #e6bd5f;
+  --i3-mark: #ec8a5b;
 
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "alphaLyrae", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-sans);
 }
 
 * {
@@ -28,12 +45,26 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
+  font-family: var(--font-sans);
+}
+
+/* subtle film grain overlay, matching the eth-lib texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 .app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 28px 24px 80px;
+  position: relative;
+  z-index: 2;
 }
 
 /* ---------- header ---------- */
@@ -58,8 +89,10 @@ body {
 }
 .app-header h1 {
   margin: 0;
-  font-size: 24px;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 .tagline {
   margin: 4px 0 0;
@@ -109,18 +142,19 @@ body {
 }
 .tab:hover {
   color: var(--text);
-  border-color: var(--accent-soft);
+  border-color: var(--border-strong);
 }
 .tab.active {
-  background: var(--accent-soft);
+  background: var(--cta-bg);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--cta-fg);
 }
 .badge {
   font-size: 9.5px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  background: rgba(255, 255, 255, 0.16);
+  color: var(--accent);
+  background: rgba(217, 183, 121, 0.16);
   padding: 1px 5px;
   border-radius: 4px;
 }
@@ -170,7 +204,9 @@ body {
 }
 .upgrade-head h2 {
   margin: 0;
+  font-family: var(--font-display);
   font-size: 18px;
+  font-weight: 500;
   letter-spacing: -0.01em;
 }
 .upgrade-sub {
@@ -216,10 +252,10 @@ body {
   transition: background 0.1s ease;
 }
 .row:hover {
-  background: rgba(139, 125, 255, 0.06);
+  background: rgba(217, 183, 121, 0.06);
 }
 .row.selected {
-  background: rgba(139, 125, 255, 0.12);
+  background: rgba(217, 183, 121, 0.12);
 }
 .row td {
   border-bottom: 1px solid var(--border);
@@ -275,13 +311,13 @@ body {
   background: transparent;
 }
 .cell.impact-1 {
-  background: color-mix(in srgb, var(--i1) 45%, transparent);
+  background: rgba(var(--i1-base), 0.1);
 }
 .cell.impact-2 {
-  background: color-mix(in srgb, var(--i2) 45%, transparent);
+  background: rgba(var(--i2-base), 0.14);
 }
 .cell.impact-3 {
-  background: color-mix(in srgb, var(--i3) 50%, transparent);
+  background: rgba(var(--i3-base), 0.2);
 }
 .cell.impact-1 .cell-mark {
   color: var(--i1-mark);
@@ -308,7 +344,7 @@ body {
 .scrim {
   position: fixed;
   inset: 0;
-  background: rgba(6, 7, 14, 0.55);
+  background: rgba(10, 9, 4, 0.6);
   backdrop-filter: blur(2px);
   z-index: 10;
 }
@@ -354,7 +390,9 @@ body {
 }
 .detail h2 {
   margin: 0 0 10px;
+  font-family: var(--font-display);
   font-size: 19px;
+  font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 1.25;
 }
@@ -380,13 +418,13 @@ body {
   border: 1px solid var(--border);
 }
 .status-final {
-  color: #4fd6a8;
-  border-color: #2f6f5f;
+  color: var(--accent);
+  border-color: rgba(217, 183, 121, 0.4);
 }
 .status-draft,
 .status-review {
-  color: #ffcf6e;
-  border-color: #6f5a2f;
+  color: #e6bd5f;
+  border-color: rgba(230, 189, 95, 0.4);
 }
 .detail h3 {
   font-size: 12px;
