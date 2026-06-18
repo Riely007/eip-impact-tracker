@@ -1,0 +1,2085 @@
+{
+  "generatedAt": "2026-06-17T21:48:49.152Z",
+  "categories": [
+    {
+      "id": "wallet",
+      "label": "Wallet",
+      "blurb": "Wallets & signing UX (MetaMask, Rabby, smart accounts)"
+    },
+    {
+      "id": "l2",
+      "label": "L2 / Rollup",
+      "blurb": "Rollups & data-availability consumers"
+    },
+    {
+      "id": "node",
+      "label": "Node / Client",
+      "blurb": "Execution & consensus client implementers"
+    },
+    {
+      "id": "rpc",
+      "label": "RPC Provider",
+      "blurb": "RPC & API infra (Infura, Alchemy, self-hosted)"
+    },
+    {
+      "id": "indexer",
+      "label": "Indexer / Data",
+      "blurb": "Indexers, explorers & analytics (The Graph, Etherscan)"
+    },
+    {
+      "id": "contracts",
+      "label": "Contract Dev",
+      "blurb": "Smart-contract & tooling developers (Solidity, Foundry)"
+    },
+    {
+      "id": "staking",
+      "label": "Staking / Validator",
+      "blurb": "Validators, staking pools & node operators"
+    }
+  ],
+  "upgrades": [
+    {
+      "name": "Glamsterdam",
+      "metaEip": 7773,
+      "status": "Draft",
+      "activatedAt": null,
+      "eips": [
+        7708,
+        7732,
+        7778,
+        7843,
+        7928,
+        7954,
+        7976,
+        7981,
+        8024,
+        8037
+      ]
+    },
+    {
+      "name": "Fusaka",
+      "metaEip": 7607,
+      "status": "Final",
+      "activatedAt": 1764798551,
+      "eips": [
+        7594,
+        7823,
+        7825,
+        7883,
+        7917,
+        7918,
+        7934,
+        7939,
+        7951,
+        7892,
+        7642,
+        7910,
+        7935
+      ]
+    },
+    {
+      "name": "Pectra",
+      "metaEip": 7600,
+      "status": "Final",
+      "activatedAt": 1746612311,
+      "eips": [
+        2537,
+        2935,
+        6110,
+        7002,
+        7251,
+        7549,
+        7623,
+        7685,
+        7691,
+        7702,
+        7840,
+        7642
+      ]
+    },
+    {
+      "name": "Dencun",
+      "metaEip": 7569,
+      "status": "Final",
+      "activatedAt": 1710338135,
+      "eips": [
+        1153,
+        4788,
+        4844,
+        5656,
+        6780,
+        7044,
+        7045,
+        7514,
+        7516
+      ]
+    },
+    {
+      "name": "Muir Glacier",
+      "metaEip": 2387,
+      "status": "Final",
+      "activatedAt": null,
+      "eips": [
+        2384
+      ]
+    },
+    {
+      "name": "Istanbul",
+      "metaEip": 1679,
+      "status": "Final",
+      "activatedAt": null,
+      "eips": [
+        152,
+        1108,
+        1344,
+        1884,
+        2028,
+        2200
+      ]
+    },
+    {
+      "name": "Constantinople",
+      "metaEip": 1013,
+      "status": "Final",
+      "activatedAt": null,
+      "eips": [
+        145,
+        1014,
+        1052,
+        1234,
+        1283
+      ]
+    },
+    {
+      "name": "Byzantium",
+      "metaEip": 609,
+      "status": "Final",
+      "activatedAt": null,
+      "eips": [
+        100,
+        140,
+        196,
+        197,
+        198,
+        211,
+        214,
+        649,
+        658
+      ]
+    },
+    {
+      "name": "Spurious Dragon",
+      "metaEip": 607,
+      "status": "Final",
+      "activatedAt": null,
+      "eips": [
+        155,
+        160,
+        161,
+        170
+      ]
+    },
+    {
+      "name": "Tangerine Whistle",
+      "metaEip": 608,
+      "status": "Final",
+      "activatedAt": null,
+      "eips": [
+        150
+      ]
+    },
+    {
+      "name": "Homestead",
+      "metaEip": 606,
+      "status": "Final",
+      "activatedAt": null,
+      "eips": [
+        2,
+        7,
+        8
+      ]
+    }
+  ],
+  "eips": {
+    "2": {
+      "number": 2,
+      "title": "Homestead Hard-fork Changes",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-2",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7": {
+      "number": 7,
+      "title": "DELEGATECALL",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "8": {
+      "number": 8,
+      "title": "devp2p Forward Compatibility Requirements for Homestead",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Networking",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-8",
+      "impact": {
+        "wallet": 0,
+        "l2": 0,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 0,
+        "staking": 2
+      },
+      "why": {
+        "node": "Changes the p2p / sync protocol clients speak",
+        "rpc": "Infra nodes must stay in sync with peers",
+        "staking": "Validator nodes depend on networking",
+        "indexer": "Relies on synced nodes upstream"
+      }
+    },
+    "100": {
+      "number": 100,
+      "title": "Change difficulty adjustment to target mean block time including uncles",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-100",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "140": {
+      "number": 140,
+      "title": "REVERT instruction",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-140",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "145": {
+      "number": 145,
+      "title": "Bitwise shifting instructions in EVM",
+      "description": "To Provide native bitwise shifting with cost on par with other arithmetic operations.",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-145",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "150": {
+      "number": 150,
+      "title": "Gas cost changes for IO-heavy operations",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-150",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "152": {
+      "number": 152,
+      "title": "Add BLAKE2 compression function `F` precompile",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-152",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "155": {
+      "number": 155,
+      "title": "Simple replay attack protection",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-155",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "160": {
+      "number": 160,
+      "title": "EXP cost increase",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-160",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "161": {
+      "number": 161,
+      "title": "State trie clearing (invariant-preserving alternative)",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-161",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "170": {
+      "number": 170,
+      "title": "Contract code size limit",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-170",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "196": {
+      "number": 196,
+      "title": "Precompiled contracts for addition and scalar multiplication on the elliptic curve alt_bn128",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-196",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "197": {
+      "number": 197,
+      "title": "Precompiled contracts for optimal ate pairing check on the elliptic curve alt_bn128",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-197",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "198": {
+      "number": 198,
+      "title": "Big integer modular exponentiation",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-198",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "211": {
+      "number": 211,
+      "title": "New opcodes: RETURNDATASIZE and RETURNDATACOPY",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-211",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "214": {
+      "number": 214,
+      "title": "New opcode STATICCALL",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-214",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "649": {
+      "number": 649,
+      "title": "Metropolis Difficulty Bomb Delay and Block Reward Reduction",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-649",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "658": {
+      "number": 658,
+      "title": "Embedding transaction status code in receipts",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-658",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "1014": {
+      "number": 1014,
+      "title": "Skinny CREATE2",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-1014",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "1052": {
+      "number": 1052,
+      "title": "EXTCODEHASH opcode",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-1052",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "1108": {
+      "number": 1108,
+      "title": "Reduce alt_bn128 precompile gas costs",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-1108",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "1153": {
+      "number": 1153,
+      "title": "Transient storage opcodes",
+      "description": "Add opcodes for manipulating state that behaves almost identically to storage but is discarded after every transaction",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-1153",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "1234": {
+      "number": 1234,
+      "title": "Constantinople Difficulty Bomb Delay and Block Reward Adjustment",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-1234",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "1283": {
+      "number": 1283,
+      "title": "Net gas metering for SSTORE without dirty maps",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-1283",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "1344": {
+      "number": 1344,
+      "title": "ChainID opcode",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-1344",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "1884": {
+      "number": 1884,
+      "title": "Repricing for trie-size-dependent opcodes",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-1884",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "2028": {
+      "number": 2028,
+      "title": "Transaction data gas cost reduction",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-2028",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "2200": {
+      "number": 2200,
+      "title": "Structured Definitions for Net Gas Metering",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-2200",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "2384": {
+      "number": 2384,
+      "title": "Muir Glacier Difficulty Bomb Delay",
+      "description": "",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-2384",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "2537": {
+      "number": 2537,
+      "title": "Precompile for BLS12-381 curve operations",
+      "description": "Adds operation on BLS12-381 curve as a precompile in a set necessary to efficiently perform operations such as BLS signature verification.",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-2537",
+      "impact": {
+        "wallet": 3,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 3
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Directly changes staking / validator lifecycle",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "New tx type must be accepted/forwarded",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Changes how wallets build & sign transactions"
+      }
+    },
+    "2935": {
+      "number": 2935,
+      "title": "Serve historical block hashes from state",
+      "description": "Store and serve last 8191 block hashes as storage slots of a system contract to allow for stateless execution",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-2935",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 2,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Affects what historical data can be served",
+        "indexer": "Historical data availability changes"
+      }
+    },
+    "4788": {
+      "number": 4788,
+      "title": "Beacon block root in the EVM",
+      "description": "Expose beacon chain roots in the EVM",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-4788",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 3
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Directly changes staking / validator lifecycle",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "4844": {
+      "number": 4844,
+      "title": "Shard Blob Transactions",
+      "description": "Shard Blob Transactions scale data-availability of Ethereum in a simple, forwards-compatible manner.",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-4844",
+      "impact": {
+        "wallet": 2,
+        "l2": 3,
+        "node": 3,
+        "rpc": 3,
+        "indexer": 2,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Major execution + consensus change",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "Proto-danksharding — the core L1 scaling lever for rollups",
+        "contracts": "BLOBHASH opcode & blob base fee",
+        "rpc": "New blob tx type & blob endpoints to serve",
+        "indexer": "Blob sidecars & blob gas to track",
+        "wallet": "Blob-carrying tx awareness for advanced flows"
+      }
+    },
+    "5656": {
+      "number": 5656,
+      "title": "MCOPY - Memory copying instruction",
+      "description": "An efficient EVM instruction for copying memory areas",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-5656",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "6110": {
+      "number": 6110,
+      "title": "Supply validator deposits on chain",
+      "description": "Provides validator deposits as a list of deposit operations added to the Execution Layer block",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-6110",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 3
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Directly changes staking / validator lifecycle",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "6780": {
+      "number": 6780,
+      "title": "SELFDESTRUCT only in same transaction",
+      "description": "SELFDESTRUCT will recover all funds to the target but not delete the account, except when called in the same transaction as creation",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-6780",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7002": {
+      "number": 7002,
+      "title": "Execution layer triggerable withdrawals",
+      "description": "Allow validators to trigger exits and partial withdrawals via their execution layer (0x01) withdrawal credentials",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7002",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 3
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Directly changes staking / validator lifecycle",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7044": {
+      "number": 7044,
+      "title": "Perpetually Valid Signed Voluntary Exits",
+      "description": "Lock voluntary exit signature domain on capella for perpetual validity",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7044",
+      "impact": {
+        "wallet": 3,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 3
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Directly changes staking / validator lifecycle",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "New tx type must be accepted/forwarded",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Changes how wallets build & sign transactions"
+      }
+    },
+    "7045": {
+      "number": 7045,
+      "title": "Increase max attestation inclusion slot",
+      "description": "Increases max attestation inclusion slot to the last slot in `N+1` where `N` is the epoch containing the attestation's slot.",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7045",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 3
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Directly changes staking / validator lifecycle",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7251": {
+      "number": 7251,
+      "title": "Increase the MAX_EFFECTIVE_BALANCE",
+      "description": "Allow validators to have larger effective balances, while maintaining the 32 ETH lower bound.",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7251",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7514": {
+      "number": 7514,
+      "title": "Add Max Epoch Churn Limit",
+      "description": "Modify the churn limit function to upper bound it to a max value",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7514",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 3
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Directly changes staking / validator lifecycle",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7516": {
+      "number": 7516,
+      "title": "BLOBBASEFEE instruction",
+      "description": "Instruction that returns the current data-blob base-fee",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7516",
+      "impact": {
+        "wallet": 2,
+        "l2": 3,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 2,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "Blob / data-availability change — central to rollup economics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Must serve/handle blob-related data",
+        "indexer": "Blob & calldata accounting affects indexing",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "7549": {
+      "number": 7549,
+      "title": "Move committee index outside Attestation",
+      "description": "Move committee index outside of the signed Attestation message",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7549",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 3
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Directly changes staking / validator lifecycle",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7594": {
+      "number": 7594,
+      "title": "PeerDAS - Peer Data Availability Sampling",
+      "description": "Introducing simple DAS utilizing gossip distribution and peer requests",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7594",
+      "impact": {
+        "wallet": 0,
+        "l2": 3,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 2,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "Blob / data-availability change — central to rollup economics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Must serve/handle blob-related data",
+        "indexer": "Blob & calldata accounting affects indexing"
+      }
+    },
+    "7623": {
+      "number": 7623,
+      "title": "Increase calldata cost",
+      "description": "Increase calldata cost to reduce maximum block size",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7623",
+      "impact": {
+        "wallet": 2,
+        "l2": 3,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 2,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "Blob / data-availability change — central to rollup economics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Must serve/handle blob-related data",
+        "indexer": "Blob & calldata accounting affects indexing",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "7642": {
+      "number": 7642,
+      "title": "eth/69 - history expiry and simpler receipts",
+      "description": "Adds history serving window and removes bloom filter in receipt",
+      "type": "Standards Track",
+      "category": "Networking",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7642",
+      "impact": {
+        "wallet": 0,
+        "l2": 0,
+        "node": 3,
+        "rpc": 3,
+        "indexer": 3,
+        "contracts": 0,
+        "staking": 2
+      },
+      "why": {
+        "node": "Changes the p2p / sync protocol clients speak",
+        "rpc": "Directly changes the RPC API surface",
+        "staking": "Validator nodes depend on networking",
+        "indexer": "Indexers depend on these endpoints"
+      }
+    },
+    "7685": {
+      "number": 7685,
+      "title": "General purpose execution layer requests",
+      "description": "A general purpose bus for sharing EL triggered requests with the CL",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7685",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7691": {
+      "number": 7691,
+      "title": "Blob throughput increase",
+      "description": "Increase the number of blobs to reach a new target and max of 6 and 9 blobs per block respectively",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7691",
+      "impact": {
+        "wallet": 0,
+        "l2": 3,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 2,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "Blob / data-availability change — central to rollup economics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Must serve/handle blob-related data",
+        "indexer": "Blob & calldata accounting affects indexing"
+      }
+    },
+    "7702": {
+      "number": 7702,
+      "title": "Set Code for EOAs",
+      "description": "Add a new tx type that permanently sets the code for an EOA",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7702",
+      "impact": {
+        "wallet": 3,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 2,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "New transaction type clients must implement",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "Delegation/authorization model for builders",
+        "rpc": "New tx type to accept and surface",
+        "indexer": "Delegated EOAs change how accounts are interpreted",
+        "wallet": "EOAs can run contract code — redefines wallet UX"
+      }
+    },
+    "7708": {
+      "number": 7708,
+      "title": "ETH transfers emit a log",
+      "description": "All ETH transfers emit a log",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Draft",
+      "url": "https://eips.ethereum.org/EIPS/eip-7708",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 3,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Logs/receipts are the indexer's primary feed"
+      }
+    },
+    "7732": {
+      "number": 7732,
+      "title": "Enshrined Proposer-Builder Separation",
+      "description": "Separates the ethereum block in consensus and execution parts, adds a mechanism for the consensus proposer to choose the execution proposer.",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Draft",
+      "url": "https://eips.ethereum.org/EIPS/eip-7732",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7778": {
+      "number": 7778,
+      "title": "Block Gas Accounting without Refunds",
+      "description": "Prevent Block Gas Limit Circumvention by Excluding Refunds from Block Gas Accounting",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Draft",
+      "url": "https://eips.ethereum.org/EIPS/eip-7778",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "7823": {
+      "number": 7823,
+      "title": "Set upper bounds for MODEXP",
+      "description": "Each input field is restricted to a maximum of 8192 bits",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7823",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7825": {
+      "number": 7825,
+      "title": "Transaction Gas Limit Cap",
+      "description": "Introduce a protocol-level cap on the maximum gas used by a transaction to 16,777,216 (2^24).",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7825",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "7840": {
+      "number": 7840,
+      "title": "Add blob schedule to EL config files",
+      "description": "Include per-fork blob parameters in client configuration files",
+      "type": "Informational",
+      "category": null,
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7840",
+      "impact": {
+        "wallet": 0,
+        "l2": 3,
+        "node": 0,
+        "rpc": 2,
+        "indexer": 2,
+        "contracts": 0,
+        "staking": 0
+      },
+      "why": {
+        "l2": "Blob / data-availability change — central to rollup economics",
+        "rpc": "Must serve/handle blob-related data",
+        "indexer": "Blob & calldata accounting affects indexing"
+      }
+    },
+    "7843": {
+      "number": 7843,
+      "title": "SLOTNUM opcode",
+      "description": "Opcode to get the current slot number",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Draft",
+      "url": "https://eips.ethereum.org/EIPS/eip-7843",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7883": {
+      "number": 7883,
+      "title": "ModExp Gas Cost Increase",
+      "description": "Increases cost of ModExp precompile",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7883",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "7892": {
+      "number": 7892,
+      "title": "Blob Parameter Only Hardforks",
+      "description": "Defines a mechanism for scaling Ethereum’s blob capacity via specialized hard forks that modify only blob-related parameters.",
+      "type": "Informational",
+      "category": null,
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7892",
+      "impact": {
+        "wallet": 0,
+        "l2": 3,
+        "node": 0,
+        "rpc": 2,
+        "indexer": 2,
+        "contracts": 0,
+        "staking": 0
+      },
+      "why": {
+        "l2": "Blob / data-availability change — central to rollup economics",
+        "rpc": "Must serve/handle blob-related data",
+        "indexer": "Blob & calldata accounting affects indexing"
+      }
+    },
+    "7910": {
+      "number": 7910,
+      "title": "eth_config JSON-RPC Method",
+      "description": "A JSON-RPC method that describes the configuration of the current and next fork",
+      "type": "Standards Track",
+      "category": "Interface",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7910",
+      "impact": {
+        "wallet": 2,
+        "l2": 0,
+        "node": 1,
+        "rpc": 3,
+        "indexer": 3,
+        "contracts": 1,
+        "staking": 0
+      },
+      "why": {
+        "rpc": "Defines the JSON-RPC / API surface providers expose",
+        "wallet": "Wallets consume these RPC interfaces",
+        "indexer": "Indexers depend on these endpoints",
+        "contracts": "Tooling talks to nodes via these interfaces",
+        "node": "Clients implement the interface"
+      }
+    },
+    "7917": {
+      "number": 7917,
+      "title": "Deterministic proposer lookahead",
+      "description": "Pre-calculate and store a deterministic proposer lookahead in the beacon state at the start of every epoch",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7917",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 3
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Directly changes staking / validator lifecycle",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7918": {
+      "number": 7918,
+      "title": "Blob base fee bounded by execution cost",
+      "description": "Imposes that the price of GAS_PER_BLOB blob gas is greater than the price of BLOB_BASE_COST execution gas.",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7918",
+      "impact": {
+        "wallet": 2,
+        "l2": 3,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 2,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "Blob / data-availability change — central to rollup economics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Must serve/handle blob-related data",
+        "indexer": "Blob & calldata accounting affects indexing",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "7928": {
+      "number": 7928,
+      "title": "Block-Level Access Lists",
+      "description": "Enforced block access lists with state locations and post-transaction state diffs",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Draft",
+      "url": "https://eips.ethereum.org/EIPS/eip-7928",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7934": {
+      "number": 7934,
+      "title": "RLP Execution Block Size Limit",
+      "description": "Introduce a protocol-level cap on the maximum RLP-encoded block size to 10 MiB, including a 2 MiB margin for beacon block size.",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7934",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 3
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Directly changes staking / validator lifecycle",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7935": {
+      "number": 7935,
+      "title": "Set default gas limit to 60M",
+      "description": "Recommend a new gas limit value for Fusaka and update execution layer client default configs",
+      "type": "Informational",
+      "category": null,
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7935",
+      "impact": {
+        "wallet": 2,
+        "l2": 0,
+        "node": 0,
+        "rpc": 2,
+        "indexer": 0,
+        "contracts": 2,
+        "staking": 0
+      },
+      "why": {
+        "contracts": "Gas/fee change affects contract economics",
+        "wallet": "Fee estimation & tx UX shifts",
+        "rpc": "Fee-related RPC responses change"
+      }
+    },
+    "7939": {
+      "number": 7939,
+      "title": "Count leading zeros (CLZ) opcode",
+      "description": "Opcode to count the number of leading zero bits in a 256-bit word",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7939",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7951": {
+      "number": 7951,
+      "title": "Precompile for secp256r1 Curve Support",
+      "description": "Add precompiled contract for secp256r1 ECDSA signature verification with proper security checks",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Final",
+      "url": "https://eips.ethereum.org/EIPS/eip-7951",
+      "impact": {
+        "wallet": 3,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 3,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "New/changed EVM capability for contract authors",
+        "rpc": "New tx type must be accepted/forwarded",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Changes how wallets build & sign transactions"
+      }
+    },
+    "7954": {
+      "number": 7954,
+      "title": "Increase Maximum Contract Size",
+      "description": "Raise the maximum contract code size from 24KiB to 64KiB and initcode size from 48KiB to 128KiB.",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Draft",
+      "url": "https://eips.ethereum.org/EIPS/eip-7954",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "7976": {
+      "number": 7976,
+      "title": "Increase Calldata Floor Cost",
+      "description": "Increase the calldata floor cost to 64/64 gas per byte to reduce maximum block size",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Draft",
+      "url": "https://eips.ethereum.org/EIPS/eip-7976",
+      "impact": {
+        "wallet": 2,
+        "l2": 3,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 2,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "Blob / data-availability change — central to rollup economics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Must serve/handle blob-related data",
+        "indexer": "Blob & calldata accounting affects indexing",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "7981": {
+      "number": 7981,
+      "title": "Increase Access List Cost",
+      "description": "Price access lists for data to reduce maximum block size",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Draft",
+      "url": "https://eips.ethereum.org/EIPS/eip-7981",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    },
+    "8024": {
+      "number": 8024,
+      "title": "Backward compatible SWAPN, DUPN, EXCHANGE",
+      "description": "Introduce additional instructions for manipulating the stack which allow accessing the stack at higher depths",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Review",
+      "url": "https://eips.ethereum.org/EIPS/eip-8024",
+      "impact": {
+        "wallet": 0,
+        "l2": 2,
+        "node": 3,
+        "rpc": 1,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Indirect: served data may shift",
+        "indexer": "Indirect: derived data may shift"
+      }
+    },
+    "8037": {
+      "number": 8037,
+      "title": "State Creation Gas Cost Increase",
+      "description": "Harmonization, increase and separate metering of state creation gas costs to mitigate state growth and unblock scaling",
+      "type": "Standards Track",
+      "category": "Core",
+      "status": "Draft",
+      "url": "https://eips.ethereum.org/EIPS/eip-8037",
+      "impact": {
+        "wallet": 2,
+        "l2": 2,
+        "node": 3,
+        "rpc": 2,
+        "indexer": 1,
+        "contracts": 2,
+        "staking": 2
+      },
+      "why": {
+        "node": "Core protocol change — clients must implement it",
+        "staking": "Validators run clients that must adopt the change",
+        "l2": "L2s track L1 EVM/consensus semantics",
+        "contracts": "May change EVM behaviour contracts rely on",
+        "rpc": "Fee-related RPC responses change",
+        "indexer": "Indirect: derived data may shift",
+        "wallet": "Fee estimation & tx UX shifts"
+      }
+    }
+  }
+}
