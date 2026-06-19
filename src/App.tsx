@@ -59,7 +59,7 @@ export function App() {
     <div className="app">
       <header className="app-header">
         <div className="brand">
-          <span className="logo">◆</span>
+          <span className="logo">♥</span>
           <div>
             <h1>EIP Impact Tracker</h1>
             <p className="tagline">
