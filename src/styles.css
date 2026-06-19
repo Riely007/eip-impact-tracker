@@ -20,9 +20,12 @@
   --border-strong: rgba(241, 236, 217, 0.22);
   --text: #f1ecd9;
   --text-dim: #9c9881;
-  --accent: #d9b779;
-  --cta-bg: linear-gradient(180deg, #2a2818 0%, #1c1b12 52%, #14130c 100%);
-  --cta-fg: #ffffe1;
+  /* focal accent — "Finite and Infinite Games" violet (#6b3fa0), lightened for
+     legibility on the dark olive ground */
+  --accent: #a07cd6;
+  --accent-deep: #6b3fa0;
+  --cta-bg: linear-gradient(180deg, #7a4bb5 0%, #5d3690 55%, #46276e 100%);
+  --cta-fg: #f3ecfb;
 
   /* impact heatmap — warm sequential ramp (khaki → gold → terracotta) */
   --i1-base: 201, 191, 143;
@@ -154,7 +157,7 @@ body::before {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--accent);
-  background: rgba(217, 183, 121, 0.16);
+  background: rgba(160, 124, 214, 0.16);
   padding: 1px 5px;
   border-radius: 4px;
 }
@@ -252,10 +255,10 @@ body::before {
   transition: background 0.1s ease;
 }
 .row:hover {
-  background: rgba(217, 183, 121, 0.06);
+  background: rgba(160, 124, 214, 0.06);
 }
 .row.selected {
-  background: rgba(217, 183, 121, 0.12);
+  background: rgba(160, 124, 214, 0.12);
 }
 .row td {
   border-bottom: 1px solid var(--border);
@@ -419,7 +422,7 @@ body::before {
 }
 .status-final {
   color: var(--accent);
-  border-color: rgba(217, 183, 121, 0.4);
+  border-color: rgba(160, 124, 214, 0.4);
 }
 .status-draft,
 .status-review {
