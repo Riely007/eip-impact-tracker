@@ -4,10 +4,14 @@ interface Props {
   eips: Eip[];
   categories: StackCategory[];
   selected: number | null;
+  focusCat: string | null;
   onSelect: (n: number) => void;
 }
 
-export function Matrix({ eips, categories, selected, onSelect }: Props) {
+export function Matrix({ eips, categories, selected, focusCat, onSelect }: Props) {
+  const colClass = (id: string) =>
+    focusCat ? (id === focusCat ? "focus" : "dim") : "";
+
   return (
     <div className="matrix-wrap">
       <table className="matrix">
@@ -15,7 +19,7 @@ export function Matrix({ eips, categories, selected, onSelect }: Props) {
           <tr>
             <th className="col-eip">EIP</th>
             {categories.map((c) => (
-              <th key={c.id} className="col-cat" title={c.blurb}>
+              <th key={c.id} className={`col-cat ${colClass(c.id)}`} title={c.blurb}>
                 {c.label}
               </th>
             ))}
@@ -36,7 +40,11 @@ export function Matrix({ eips, categories, selected, onSelect }: Props) {
               {categories.map((c) => {
                 const lv = e.impact[c.id] as ImpactLevel;
                 return (
-                  <td key={c.id} className={`cell impact-${lv}`} title={e.why[c.id] || IMPACT_LABELS[lv]}>
+                  <td
+                    key={c.id}
+                    className={`cell impact-${lv} ${colClass(c.id)}`}
+                    title={e.why[c.id] || IMPACT_LABELS[lv]}
+                  >
                     {lv > 0 && <span className="cell-mark">{IMPACT_LABELS[lv][0]}</span>}
                   </td>
                 );
